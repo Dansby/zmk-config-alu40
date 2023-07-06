@@ -125,6 +125,24 @@
             #binding-cells = <0>;
             bindings = <&kp J &kp RET>;
         };
+        align: align {
+            compatible = "zmk,behavior-macro";
+            label = "ALIGN";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp L &kp RET>;
+        };
+        array: array {
+            compatible = "zmk,behavior-macro";
+            label = "ARRAY";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp R &kp RET>;
+        };
+        copyspecific: copyspecific {
+            compatible = "zmk,behavior-macro";
+            label = "COPYSPECIFIC";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp O &kp RET>;
+        };
     };
 
     keymap {
@@ -149,10 +167,10 @@
 
         lower {
             bindings = <
- &qsave  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)     &kp DEL
-&kp DEL        &arc    &stretch      &scale     &fillet     &offset     &mirror       &join   &lengthen       &line    &kp RBRC    &kp PIPE
- &trans      &layer    &explode     &circle      &erase    &polygon     &extend       &move      &trans      &trans      &trans      &trans
- &trans      &trans      &trans      &trans      &trans      &trans      &trans       &mo 3  &kp C_PREV    &kp HOME     &kp END  &kp C_NEXT
+ &qsave  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)        &kp LS(N8)            &kp LS(N9)             &kp LS(N0)            &kp DEL
+&kp DEL        &arc    &stretch      &scale     &fillet     &offset     &mirror       &join         &lengthen                 &line                &rotate           &kp PIPE
+ &trans      &layer    &explode     &circle      &erase    &polygon     &extend       &move            &align                &array          &copyspecific             &trans
+ &trans      &trans      &trans      &trans      &trans      &trans      &trans       &mo 3  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
