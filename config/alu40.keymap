@@ -29,6 +29,102 @@
             #binding-cells = <0>;
             bindings = <&kp T &kp R &kp RET>;
         };
+        fillet: fillet {
+            compatible = "zmk,behavior-macro";
+            label = "FILLET";
+            #binding-cells = <0>;
+            bindings = <&kp F &kp RET>;
+        };
+        arc: arc {
+            compatible = "zmk,behavior-macro";
+            label = "ARC";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp RET>;
+        };
+        erase: erase {
+            compatible = "zmk,behavior-macro";
+            label = "ERASE";
+            #binding-cells = <0>;
+            bindings = <&kp E &kp RET>;
+        };
+        extend: extend {
+            compatible = "zmk,behavior-macro";
+            label = "EXTEND";
+            #binding-cells = <0>;
+            bindings = <&kp E &kp X &kp RET>;
+        };
+        layer: layer {
+            compatible = "zmk,behavior-macro";
+            label = "LAYER";
+            #binding-cells = <0>;
+            bindings = <&kp L &kp A &kp RET>;
+        };
+        lengthen: lengthen {
+            compatible = "zmk,behavior-macro";
+            label = "LENGTHEN";
+            #binding-cells = <0>;
+            bindings = <&kp L &kp E &kp N &kp RET>;
+        };
+        move: move {
+            compatible = "zmk,behavior-macro";
+            label = "MOVE";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp RET>;
+        };
+        mirror: mirror {
+            compatible = "zmk,behavior-macro";
+            label = "MIRROR";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp I &kp RET>;
+        };
+        offset: offset {
+            compatible = "zmk,behavior-macro";
+            label = "OFFSET";
+            #binding-cells = <0>;
+            bindings = <&kp O &kp RET>;
+        };
+        polygon: polygon {
+            compatible = "zmk,behavior-macro";
+            label = "POLYGON";
+            #binding-cells = <0>;
+            bindings = <&kp P &kp O &kp L &kp RET>;
+        };
+        qsave: qsave {
+            compatible = "zmk,behavior-macro";
+            label = "QSAVE";
+            #binding-cells = <0>;
+            bindings = <&kp Q &kp RET>;
+        };
+        rotate: rotate {
+            compatible = "zmk,behavior-macro";
+            label = "ROTATE";
+            #binding-cells = <0>;
+            bindings = <&kp R &kp O &kp RET>;
+        };
+        scale: scale {
+            compatible = "zmk,behavior-macro";
+            label = "SCALE";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp C &kp RET>;
+        };
+        stretch: stretch {
+            compatible = "zmk,behavior-macro";
+            label = "STRETCH";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp RET>;
+        };
+        explode: explode {
+            compatible = "zmk,behavior-macro";
+            label = "EXPLODE";
+            #binding-cells = <0>;
+            bindings = <&kp X &kp RET>;
+        };
+        join: join {
+            compatible = "zmk,behavior-macro";
+            label = "JOIN";
+            #binding-cells = <0>;
+            bindings = <&kp J &kp RET>;
+        };
     };
 
     keymap {
@@ -53,10 +149,10 @@
 
         lower {
             bindings = <
-&kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)     &kp DEL
-      &kp DEL      &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6   &kp UNDER    &kp PLUS       &line    &kp RBRC    &kp PIPE
-       &trans      &kp F7      &kp F8     &circle     &kp F10     &kp F11     &kp F12      &trans      &trans      &trans      &trans      &trans
-       &trans      &trans      &trans      &trans      &trans      &trans      &trans       &mo 3  &kp C_PREV    &kp HOME     &kp END  &kp C_NEXT
+ &qsave  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)     &kp DEL
+&kp DEL        &arc    &stretch      &scale     &fillet     &offset     &mirror       &join   &lengthen       &line    &kp RBRC    &kp PIPE
+ &trans      &layer    &explode     &circle      &erase    &polygon     &extend       &move      &trans      &trans      &trans      &trans
+ &trans      &trans      &trans      &trans      &trans      &trans      &trans       &mo 3  &kp C_PREV    &kp HOME     &kp END  &kp C_NEXT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
