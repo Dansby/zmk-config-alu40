@@ -149,6 +149,36 @@
             #binding-cells = <0>;
             bindings = <&kp Q &kp C &kp RET>;
         };
+        rectangle: rectangle {
+            compatible = "zmk,behavior-macro";
+            label = "RECTANGLE";
+            #binding-cells = <0>;
+            bindings = <&kp R &kp E &kp C &kp RET>;
+        };
+        solid: solid {
+            compatible = "zmk,behavior-macro";
+            label = "SOLID";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp O &kp RET>;
+        };
+        snap: snap {
+            compatible = "zmk,behavior-macro";
+            label = "SNAP";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp N &kp RET>;
+        };
+        mtext: mtext {
+            compatible = "zmk,behavior-macro";
+            label = "MTEXT";
+            #binding-cells = <0>;
+            bindings = <&kp T &kp RET>;
+        };
+        tedit: tedit {
+            compatible = "zmk,behavior-macro";
+            label = "TEDIT";
+            #binding-cells = <0>;
+            bindings = <&kp T &kp E &kp D &kp RET>;
+        };
     };
 
     keymap {
@@ -173,10 +203,10 @@
 
         lower {
             bindings = <
-&qsave  &q_calc    &trans  &explode  &rotate   &trim   &trans  &trans     &trans  &offset       &polygon  &kp DEL
-&trans     &arc  &stretch    &scale  &fillet  &trans  &mirror   &join  &lengthen    &line         &trans   &trans
-&trans   &layer    &trans   &circle   &erase  &trans  &extend   &move     &align   &array  &copyspecific   &trans
-&trans   &trans    &trans    &trans   &trans  &trans   &trans   &mo 4     &trans   &trans         &trans   &trans
+&qsave  &q_calc    &trans   &trans  &rectangle   &trim   &trans  &trans     &trans  &offset       &polygon  &kp DEL
+&mtext     &arc  &stretch   &scale     &fillet  &trans  &mirror   &join  &lengthen    &line         &trans  &rotate
+&tedit   &layer  &explode  &circle      &erase  &trans  &extend   &move     &align   &array  &copyspecific   &trans
+&trans   &trans    &trans   &trans      &trans  &trans   &trans   &mo 4     &trans   &trans         &trans   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
